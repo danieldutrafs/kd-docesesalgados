@@ -38,7 +38,7 @@
         <section class="promo">
             <h1 class="so-leitor">Biscoitos Decorados de Natal | KD Doces & Salgados</h1>
 
-            <img src="src/img/combonata.jpeg"
+            <img src="src/img/combo-natal.jpeg"
                 alt="Biscoitos decorados de Natal: 1 Papai Noel, 1 árvore e 1 touca por R$ 6,00" class="img-promo"
                 width="1199" height="1312">
 
@@ -51,13 +51,14 @@
         </section>
 
         <main>
+            <!-- CAMPEÕES DE VENDAS -->
             <section class="area-mais-vendidos">
                 <h2>✨ Nossos campeões de vendas</h2>
 
                 <div class="area-cards">
 
                     <article class="cards">
-                        <img src="src/img/kitmaisvendido.jpg" alt="50 salgados sortidos e 15 doces" loading="lazy">
+                        <img src="src/img/mais-vendido.jpg" alt="50 salgados sortidos e 15 doces" loading="lazy">
                         <span class="selo">O mais pedido</span>
                         <h3>50 Salgados Sortidos + 15 doces</h3>
                         <p class="descricao">Ideal para eventos, cafés e lanches</p>
@@ -66,18 +67,8 @@
                             href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20o%20kit%20de%2050%20salgados%20%2B%2015%20doces">Pedir agora</a>
                     </article>
 
-                    <article class="cards">
-                        <img src="src/img/tortafria.jpg" alt="Torta fria decorada para o Natal" loading="lazy">
-                        <span class="selo">Especial de Natal</span>
-                        <h3>Torta Fria</h3>
-                        <p class="descricao">Tamanhos P e G, com vários recheios.</p>
-                        <p class="preco"><small>A partir de</small> R$ 75,00</p>
-                        <a class="btn-kit"
-                            href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20encomendar%20uma%20Torta%20Fria%20de%20Natal">Pedir agora</a>
-                    </article>
-
                     <article class="cards card-kits">
-                        <img src="src/img/kitfesta.jpg" alt="Kit festa com bolo, salgados e docinhos" loading="lazy">
+                        <img src="src/img/kit-festa.jpg" alt="Kit festa com bolo, salgados e docinhos" loading="lazy">
                         <h3>Kits Festa</h3>
                         <p class="descricao">Bolo, salgados e doces. Escolha o tamanho da sua festa.</p>
                         <p class="preco"><small>A partir de</small> R$ 340,00</p>
@@ -86,7 +77,7 @@
                     </article>
 
                     <article class="cards">
-                        <img src="src/img/supercombo.jpg" alt="Super combo com 500 salgados assados" loading="lazy">
+                        <img src="src/img/super-combo.jpg" alt="Super combo com 500 salgados assados" loading="lazy">
                         <h3>Super Combo Salgados</h3>
                         <p class="descricao">500 salgados assados para a sua festa.</p>
                         <p class="preco">R$ 400,00</p>
@@ -97,6 +88,55 @@
                 </div>
             </section>
 
+            <!-- CARDÁPIO -->
+            <section class="area-cardapio" id="cardapio">
+                <h2>📖 Nosso cardápio</h2>
+                <p class="sub-cardapio">Toque para ver completo</p>
+
+                <div class="grid-cardapio">
+                    <button class="item-cardapio" type="button" data-img="sec/img/cardapio-salgado.jpeg">
+                        <img src="src/img/salgados.jpeg" alt="Cardápio de salgados para festa" loading="lazy">
+                        <span>Salgados</span>
+                    </button>
+
+                    <button class="item-cardapio" type="button" data-img="src/img/cardapio-especiais.jpeg">
+                        <img src="src/img/especiais.jpeg"
+                            alt="Cardápio de mini sanduíches, hambúrgueres, panelinhas e barquetes" loading="lazy">
+                        <span>Especiais</span>
+                    </button>
+
+                    <button class="item-cardapio" type="button" data-img="src/img/cardapio-doces.jpeg">
+                        <img src="src/img/doces.jpeg" alt="Cardápio de doces para festa" loading="lazy">
+                        <span>Doces</span>
+                    </button>
+
+                    <button class="item-cardapio" type="button" data-img="src/img/cardapio-bolos.jpeg">
+                        <img src="src/img/bolos.jpeg" alt="Cardápio de bolos, tamanhos e recheios"
+                            loading="lazy">
+                        <span>Bolos</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ESPECIAL DE NATAL -->
+            <section class="area-natal">
+                <p class="sobretitulo">Especial de Natal</p>
+                <h2>🎄 Torta Fria para a sua ceia</h2>
+
+                <article class="card-natal">
+                    <img src="src/img/torta-fria.jpg" alt="Torta fria decorada para o Natal" loading="lazy">
+
+                    <div class="texto-natal">
+                        <h3>Torta Fria</h3>
+                        <p class="descricao">Tamanhos P e G, com vários recheios.</p>
+                        <p class="preco"><small>A partir de</small> R$ 75,00</p>
+                        <a class="btn-kit"
+                            href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20encomendar%20uma%20Torta%20Fria%20de%20Natal">Pedir agora</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- APRESENTAÇÃO -->
             <section class="area-apresentacao">
                 <div class="conteudo-apresentacao">
                     <div class="texto-apresentacao">
@@ -104,11 +144,12 @@
                         <p>Há 20 anos faço salgados, doces e bolos para aniversários, reuniões e eventos da região.</p>
                         <p>Me chama no WhatsApp que eu mesma cuido do seu pedido, do orçamento até a entrega.</p>
                     </div>
-                    <img src="src/img/fotopessoal.png" alt="Kênia sorrindo na cozinha segurando uma bandeja de doces"
+                    <img src="src/img/foto-pessoal.png" alt="Kênia sorrindo na cozinha segurando uma bandeja de doces"
                         loading="lazy">
                 </div>
             </section>
 
+            <!-- DEPOIMENTOS -->
             <section class="area-depoimentos">
                 <h2>⭐ O que dizem nossos clientes</h2>
 
@@ -129,7 +170,7 @@
 
         <footer class="rodape">
             <h2 class="rodape-titulo">Kênia Doces & Salgados</h2>
-            <p class="rodape-texto"><p class="rodape-texto"><p class="rodape-texto">Há 20 anos fazendo cada pedido com amor e carinho.</p></p></p>
+            <p class="rodape-texto">Há 20 anos fazendo cada pedido com amor e carinho.</p>
 
             <div class="rodape-botoes">
                 <a class="rodape-btn"
@@ -144,7 +185,36 @@
             <p class="rodape-credito">© 2026 Kênia Doces & Salgados · Site por Etherno Labs</p>
         </footer>
 
+        <!-- JANELA DO CARDÁPIO (abre a imagem grande) -->
+        <dialog class="visualizador" id="visualizador">
+            <button class="fechar" type="button" aria-label="Fechar">✕</button>
+            <img src="" alt="Cardápio">
+            <a class="btn-whats"
+                href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20quero%20fazer%20um%20pedido">
+                Fazer meu pedido
+            </a>
+        </dialog>
+
     </div>
+
+    <script>
+        const janela = document.getElementById('visualizador');
+        const imagem = janela.querySelector('img');
+
+        document.querySelectorAll('.item-cardapio').forEach(botao => {
+            botao.addEventListener('click', () => {
+                imagem.src = botao.dataset.img;
+                janela.showModal();
+            });
+        });
+
+        janela.querySelector('.fechar').addEventListener('click', () => janela.close());
+
+        // fecha ao tocar fora da imagem
+        janela.addEventListener('click', e => {
+            if (e.target === janela) janela.close();
+        });
+    </script>
 </body>
 
 </html>

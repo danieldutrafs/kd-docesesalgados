@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 112.5%;                /* aumenta todos os textos (18px) */
+}
+
 h1, h2, h3, p {
     margin: 0;
 }
@@ -26,13 +30,13 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: var(--vinho);
-    background: var(--rosa);          /* fundo atrás da coluna, só aparece no computador */
+    background: var(--rosa);
     -webkit-text-size-adjust: 100%;
 }
 
 /* ---------- COLUNA DE CELULAR ---------- */
 .pagina {
-    max-width: 480px;                 /* trava a largura de celular, inclusive no computador */
+    max-width: 480px;
     min-height: 100vh;
     margin: 0 auto;
     background: var(--creme);
@@ -40,7 +44,7 @@ body {
     box-shadow: 0 0 30px rgba(90, 26, 51, 0.2);
 }
 
-/* texto só para leitores de tela e Google (h1 invisível) */
+/* texto só para leitores de tela e Google */
 .so-leitor {
     position: absolute;
     width: 1px;
@@ -53,7 +57,7 @@ body {
 /* ---------- TOPO ---------- */
 .topo {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;   /* laterais iguais, marca no centro exato */
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: clamp(6px, 2vw, 12px);
     padding: 6px clamp(12px, 4vw, 20px);
@@ -67,13 +71,12 @@ body {
     height: clamp(34px, 10vw, 44px);
     border-radius: 50%;
     object-fit: cover;
-    background: #fff;
+    background: var(--rosa);
     border: 2px solid var(--dourado);
 }
 
 .marca {
     justify-self: center;
-    max-width: none;
     padding: 6px clamp(8px, 2.5vw, 14px);
     font-size: clamp(0.6rem, 3vw, 0.8rem);
     font-weight: 700;
@@ -158,19 +161,6 @@ body {
     transform: scale(0.98);
 }
 
-.btn-whats-verde {
-    color: #fff;
-    background: var(--verde-whats);
-    box-shadow: 0 4px 10px rgba(37, 162, 68, 0.35);
-}
-
-.aviso-cliques {
-    display: block;
-    margin-top: 8px;
-    font-size: 0.8rem;
-    opacity: 0.85;
-}
-
 /* ---------- TÍTULOS DE SEÇÃO ---------- */
 .sobretitulo {
     font-size: 0.75rem;
@@ -193,7 +183,6 @@ body {
     padding: 24px 0 8px 12px;
 }
 
-.area-mais-vendidos .sobretitulo,
 .area-mais-vendidos h2 {
     padding-right: 12px;
 }
@@ -209,7 +198,7 @@ body {
 
 .cards {
     position: relative;
-    flex: 0 0 140px;
+    flex: 0 0 160px;
     display: flex;
     flex-direction: column;
     padding: 8px;
@@ -218,6 +207,8 @@ body {
     box-shadow: 0 3px 10px rgba(90, 26, 51, 0.12);
     scroll-snap-align: start;
 }
+
+
 
 .cards img {
     width: 100%;
@@ -257,6 +248,13 @@ body {
     font-weight: 700;
 }
 
+.preco small {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
 .btn-kit {
     display: block;
     margin-top: auto;
@@ -269,6 +267,139 @@ body {
     background: var(--rosa-claro);
     border: 1px solid var(--dourado);
     border-radius: 8px;
+}
+
+/* ---------- CARDÁPIO ---------- */
+.area-cardapio {
+    padding: 24px 16px 8px;
+}
+
+.area-cardapio h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.sub-cardapio {
+    margin: 4px 0 16px;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.85;
+}
+
+.grid-cardapio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.item-cardapio {
+    padding: 0;
+    overflow: hidden;
+    font-family: inherit;
+    color: var(--vinho);
+    background: #fff;
+    border: 2px solid var(--dourado);
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(90, 26, 51, 0.12);
+    cursor: pointer;
+}
+
+.item-cardapio img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: top;
+}
+
+.item-cardapio span {
+    display: block;
+    padding: 10px 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: var(--rosa-claro);
+}
+
+.item-cardapio:active {
+    transform: scale(0.97);
+}
+
+/* janela que abre a imagem grande */
+.visualizador {
+    width: 100%;
+    max-width: 480px;
+    max-height: 100dvh;
+    margin: auto;
+    padding: 12px;
+    overflow-y: auto;
+    background: var(--creme);
+    border: 0;
+}
+
+.visualizador::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.visualizador img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    border-radius: 12px;
+}
+
+.fechar {
+    position: sticky;
+    top: 0;
+    float: right;
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    margin: 0 0 8px 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--vinho);
+    border: 0;
+    border-radius: 50%;
+}
+
+/* ---------- ESPECIAL DE NATAL ---------- */
+.area-natal {
+    padding: 16px 12px;
+}
+
+.area-natal h2 {
+    margin: 4px 0 14px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card-natal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #fff;
+    border: 2px solid var(--dourado);
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(90, 26, 51, 0.12);
+}
+
+.card-natal img {
+    flex: 0 0 42%;
+    width: 42%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.texto-natal {
+    flex: 1;
+}
+
+.texto-natal h3 {
+    font-size: 1rem;
 }
 
 /* ---------- APRESENTAÇÃO ---------- */
@@ -290,12 +421,8 @@ body {
     flex: 1;
 }
 
-.texto-apresentacao .sobretitulo {
-    text-align: left;
-}
-
 .texto-apresentacao h2 {
-    margin: 4px 0 8px;
+    margin: 0 0 8px;
     font-size: 1.05rem;
     font-weight: 800;
     line-height: 1.2;
@@ -305,7 +432,7 @@ body {
     margin-top: 6px;
 }
 
-.texto-apresentacao p:not(.sobretitulo) {
+.texto-apresentacao p {
     font-size: 0.72rem;
     line-height: 1.45;
 }
@@ -358,8 +485,9 @@ body {
     margin: 0 12px 12px;
     padding: 28px 16px 20px;
     text-align: center;
-    color: #fff;
-    background: linear-gradient(160deg, #7a2a47 0%, var(--vinho) 100%);
+    color: var(--vinho);
+    background: var(--rosa);
+    border: 2px solid var(--dourado);
     border-radius: 24px;
 }
 
@@ -388,10 +516,10 @@ body {
     padding: 11px 20px;
     font-size: 0.85rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--vinho);
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: var(--creme);
+    border: 2px solid var(--dourado);
     border-radius: 999px;
 }
 
@@ -403,7 +531,6 @@ body {
     margin-top: 6px;
     font-size: 1rem;
     font-weight: 800;
-    color: var(--dourado);
 }
 
 .rodape-credito {
