@@ -4,70 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KD Doces & Salgados</title>
+    <title>KD Doces & Salgados | Festas e Encomendas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
-    <div class="topo">
-        <header>
-            <h1>KD DOCES & SALGADOS</h1>
-            <img src="" alt="logo">
+    <div class="pagina">
+
+        <header class="topo">
+            <img src="src/img/LOGO.png" alt="Logo KD Doces & Salgados" class="logo" width="40" height="40">
+
+            <p class="marca">KD DOCES & SALGADOS</p>
+
+            <div class="acoes-topo">
+                <a class="icone-whats" href="https://wa.me/5551980194625" aria-label="Falar no WhatsApp">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.1.82.83-3.03-.2-.31a8.2 8.2 0 1 1 6.97 3.85Zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.17.25-.64.8-.78.97-.14.17-.29.19-.54.06a6.7 6.7 0 0 1-3.3-2.88c-.25-.43.25-.4.72-1.33.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.76-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.24 3.75 1.57.68 2.19.74 2.98.62.48-.07 1.46-.6 1.67-1.17.2-.58.2-1.07.14-1.17-.06-.1-.23-.17-.48-.29Z" />
+                    </svg>
+                </a>
+
+                <button class="btn-menu" type="button" aria-label="Abrir menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </header>
-    </div>
-    <section class="promo">
-        <div class="area-promo">
-            <h2 class="tipo-promo"></h2>
-            <h2 class="titulo-promo"></h2>
-            <p></p>
-            <img src="" alt="imagem demonstrativa" class="img-promo">
-            <h2 class="valor-promo"></h2>
-            <a class="btn-whats" href="https://wa.me/5551980194625">Promo</a>
-            <span>Faça o seu pedido em 2 cliques</span>
-        </div>
-    </section>
 
-    <main>
-        <section class="area-mais-vendidos">
-            <h2>Nossos campeões em vendas</h2>
-            <div class="area-cards">
-                <div class="cards">
-                    <img src="" alt="">
-                    <h2></h2>
-                    <p class="descricao"></p>
-                    <h2></h2>
-                    <a class="btn-kit" href=""></a>
-                </div>
-            </div>
-        </section>
+        <section class="promo">
+            <h1 class="so-leitor">Biscoitos Decorados de Natal | KD Doces & Salgados</h1>
 
-        <section class="area-apresentacao">
-            <h2>Quem somos?</h2>
-            <div class="area-apresentacao">
-                <h2></h2>
-                <p></p>
-                <img src="" alt="">
-            </div>
-        </section>
+            <img src="src/img/combonata.jpeg"
+                alt="Biscoitos decorados de Natal: 1 Papai Noel, 1 árvore e 1 touca por R$ 6,00" class="img-promo"
+                width="1199" height="1312">
 
-        <section class="area-depoimentos">
-            <h2>O que nossos clientes dizem</h2>
-            <div class="cards-comentarios">
-                <img src="" alt="">
-                <p></p>
-                <h2></h2>
-            </div>
-        </section>
-    </main>
-    <footer class="rodape">
-            <div class="area-marca">
-                <span class="texto-chamatvo"> Encomende para seu evento</span>
+            <div class="area-btn-promo">
                 <a class="btn-whats"
-                    href="https://wa.me/5551980194625">WhatsApp</a>
-                <a href="https://www.instagram.com/keniadocesesalgados?jplx=bzNpa3R5MGd6cGV1" target="_blank"
-                    rel="noopener">Instagram</a>
-                <p>Entregue em toda capital</p>
+                    href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20encomendar%20os%20Biscoitos%20Decorados%20de%20Natal">
+                    Faça já sua encomenda
+                </a>
             </div>
+        </section>
+
+        <main>
+            <section class="area-mais-vendidos">
+                <h2>✨ Nossos campeões de vendas</h2>
+
+                <div class="area-cards">
+
+                    <article class="cards">
+                        <img src="src/img/kitmaisvendido.jpg" alt="50 salgados sortidos e 15 doces" loading="lazy">
+                        <span class="selo">O mais pedido</span>
+                        <h3>50 Salgados Sortidos + 15 doces</h3>
+                        <p class="descricao">Ideal para eventos, cafés e lanches</p>
+                        <p class="preco">R$ 75,00</p>
+                        <a class="btn-kit"
+                            href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20o%20kit%20de%2050%20salgados%20%2B%2015%20doces">Pedir agora</a>
+                    </article>
+
+                    <article class="cards">
+                        <img src="src/img/tortafria.jpg" alt="Torta fria decorada para o Natal" loading="lazy">
+                        <span class="selo">Especial de Natal</span>
+                        <h3>Torta Fria</h3>
+                        <p class="descricao">Tamanhos P e G, com vários recheios.</p>
+                        <p class="preco"><small>A partir de</small> R$ 75,00</p>
+                        <a class="btn-kit"
+                            href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20encomendar%20uma%20Torta%20Fria%20de%20Natal">Pedir agora</a>
+                    </article>
+
+                    <article class="cards card-kits">
+                        <img src="src/img/kitfesta.jpg" alt="Kit festa com bolo, salgados e docinhos" loading="lazy">
+                        <h3>Kits Festa</h3>
+                        <p class="descricao">Bolo, salgados e doces. Escolha o tamanho da sua festa.</p>
+                        <p class="preco"><small>A partir de</small> R$ 340,00</p>
+                        <a class="btn-kit"
+                            href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20um%20Kit%20Festa.%20Pode%20me%20passar%20os%20detalhes%3F">Pedir agora</a>
+                    </article>
+
+                    <article class="cards">
+                        <img src="src/img/supercombo.jpg" alt="Super combo com 500 salgados assados" loading="lazy">
+                        <h3>Super Combo Salgados</h3>
+                        <p class="descricao">500 salgados assados para a sua festa.</p>
+                        <p class="preco">R$ 400,00</p>
+                        <a class="btn-kit"
+                            href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20o%20Super%20Combo%20de%20500%20Salgados">Pedir agora</a>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="area-apresentacao">
+                <div class="conteudo-apresentacao">
+                    <div class="texto-apresentacao">
+                        <h2>Prazer, eu sou a Kênia</h2>
+                        <p>Há 20 anos faço salgados, doces e bolos para aniversários, reuniões e eventos da região.</p>
+                        <p>Me chama no WhatsApp que eu mesma cuido do seu pedido, do orçamento até a entrega.</p>
+                    </div>
+                    <img src="src/img/fotopessoal.png" alt="Kênia sorrindo na cozinha segurando uma bandeja de doces"
+                        loading="lazy">
+                </div>
+            </section>
+
+            <section class="area-depoimentos">
+                <h2>⭐ O que dizem nossos clientes</h2>
+
+                <div class="cards-comentarios">
+                    <article class="card-depoimento">
+                        <p>Melhores salgados da cidade! Sequinhos, crocantes e o recheio é divino. Minha festa foi um
+                            sucesso!</p>
+                        <p class="autor">Mariana S. <span aria-label="5 estrelas">⭐⭐⭐⭐⭐</span></p>
+                    </article>
+
+                    <article class="card-depoimento">
+                        <p>Os docinhos e o bolo são maravilhosos, tudo muito caprichado e entrega pontual!</p>
+                        <p class="autor">Cláudio M. <span aria-label="5 estrelas">⭐⭐⭐⭐⭐</span></p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <h2 class="rodape-titulo">Kênia Doces & Salgados</h2>
+            <p class="rodape-texto"><p class="rodape-texto"><p class="rodape-texto">Há 20 anos fazendo cada pedido com amor e carinho.</p></p></p>
+
+            <div class="rodape-botoes">
+                <a class="rodape-btn"
+                    href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido"
+                    target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="rodape-btn" href="https://www.instagram.com/keniadocesesalgados" target="_blank"
+                    rel="noopener noreferrer">Instagram</a>
+            </div>
+
+            <p class="rodape-destaque">Sua festa merece o melhor.</p>
+
+            <p class="rodape-credito">© 2026 Kênia Doces & Salgados · Site por Etherno Labs</p>
         </footer>
+
+    </div>
 </body>
 
 </html>
