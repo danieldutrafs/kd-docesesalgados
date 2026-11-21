@@ -29,11 +29,26 @@
                     </svg>
                 </a>
 
-                <button class="btn-menu" type="button" aria-label="Abrir menu">
+                <button class="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false"
+                    aria-controls="menu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </header>
+
+        <!-- MENU HAMBÚRGUER -->
+        <div class="fundo-menu" id="fundo-menu"></div>
+
+        <nav class="menu" id="menu" aria-hidden="true" aria-label="Menu principal">
+            <a href="#campeoes">Mais vendidos</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#natal">Especial de Natal</a>
+            <a href="#sobre">Sobre a Kênia</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a class="menu-whats"
+                href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido"
+                target="_blank" rel="noopener noreferrer">Fazer meu pedido</a>
+        </nav>
 
         <section class="promo">
             <h1 class="so-leitor">Biscoitos Decorados de Natal | KD Doces & Salgados</h1>
@@ -56,8 +71,8 @@
 
         <main>
             <!-- CAMPEÕES DE VENDAS -->
-            <section class="area-mais-vendidos">
-                <h2>✨ Nossos campeões de vendas</h2>
+            <section class="area-mais-vendidos" id="campeoes">
+                <h2>Nossos campeões de vendas</h2>
 
                 <div class="area-cards">
 
@@ -125,7 +140,7 @@
             </section>
 
             <!-- ESPECIAL DE NATAL -->
-            <section class="area-natal">
+            <section class="area-natal" id="natal">
                 <p class="sobretitulo">Especial de Natal</p>
                 <h2>🎄 Torta Fria para a sua ceia</h2>
 
@@ -137,13 +152,14 @@
                         <p class="descricao">Tamanhos P e G, com vários recheios.</p>
                         <p class="preco"><small>A partir de</small> R$ 75,00</p>
                         <a class="btn-kit"
-                            href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20encomendar%20uma%20Torta%20Fria%20de%20Natal">Encomende a sua!</a>
+                            href="https://wa.me/5551980194625?text=Ol%C3%A1!%20Quero%20encomendar%20uma%20Torta%20Fria%20de%20Natal">Encomende
+                            a sua!</a>
                     </div>
                 </article>
             </section>
 
             <!-- APRESENTAÇÃO -->
-            <section class="area-apresentacao">
+            <section class="area-apresentacao" id="sobre">
                 <div class="conteudo-apresentacao">
                     <div class="texto-apresentacao">
                         <h2>Prazer, eu sou a Kênia</h2>
@@ -156,7 +172,7 @@
             </section>
 
             <!-- DEPOIMENTOS -->
-            <section class="area-depoimentos">
+            <section class="area-depoimentos" id="depoimentos">
                 <h2>Quem já provou, recomenda</h2>
 
                 <div class="cards-comentarios">
@@ -252,7 +268,9 @@
                 </a>
             </div>
 
+            <p class="rodape-destaque">Sua festa merece o melhor.</p>
 
+            <p class="rodape-aviso">As imagens apresentadas neste site são ilustrativas.</p>
 
             <p class="rodape-credito">© 2026 Kênia Doces & Salgados · Site por Etherno Labs</p>
         </footer>
@@ -269,24 +287,7 @@
 
     </div>
 
-    <script>
-        const janela = document.getElementById('visualizador');
-        const imagem = janela.querySelector('img');
-
-        document.querySelectorAll('.item-cardapio').forEach(botao => {
-            botao.addEventListener('click', () => {
-                imagem.src = botao.dataset.img;
-                janela.showModal();
-            });
-        });
-
-        janela.querySelector('.fechar').addEventListener('click', () => janela.close());
-
-        // fecha ao tocar fora da imagem
-        janela.addEventListener('click', e => {
-            if (e.target === janela) janela.close();
-        });
-    </script>
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>
