@@ -142,7 +142,10 @@ body {
 }
 
 .btn-whats {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
     min-height: 52px;
     padding: 14px 16px;
@@ -150,11 +153,11 @@ body {
     font-weight: 700;
     line-height: 1.3;
     text-align: center;
-    color: var(--vinho);
+    color: #fff;
     text-decoration: none;
-    background: linear-gradient(180deg, #e3c05a, var(--dourado));
+    background: linear-gradient(180deg, #2fbf55, var(--verde-whats));
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(212, 169, 55, 0.4);
+    box-shadow: 0 4px 10px rgba(37, 162, 68, 0.4);
 }
 
 .btn-whats:active {
@@ -257,15 +260,20 @@ body {
 .btn-kit {
     display: block;
     margin-top: auto;
-    padding: 8px;
+    padding: 9px 8px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     color: var(--vinho);
     text-decoration: none;
-    background: var(--rosa-claro);
-    border: 1px solid var(--dourado);
+    background: linear-gradient(180deg, #e3c05a, var(--dourado));
+    border: 0;
     border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(212, 169, 55, 0.4);
+}
+
+.btn-kit:active {
+    transform: scale(0.97);
 }
 
 /* ---------- CARDÁPIO ---------- */
