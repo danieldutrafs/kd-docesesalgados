@@ -685,7 +685,182 @@ body {
     opacity: 0.7;
 }
 
-/* ---------- CELULARES MUITO PEQUENOS ---------- */
+/* ---------- ANIMAÇÕES ---------- */
+
+/* Botões */
+.btn-whats,
+.btn-kit,
+.rodape-btn,
+.item-cardapio,
+.menu a {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+@media (hover: hover) {
+    .btn-whats:hover,
+    .btn-kit:hover,
+    .rodape-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(90, 26, 51, 0.25);
+    }
+
+    .item-cardapio:hover {
+        transform: translateY(-3px);
+    }
+
+    .menu a:hover {
+        background: var(--rosa-claro);
+        padding-left: 18px;
+    }
+}
+
+/* Pulso no botão principal da promo */
+.area-btn-promo .btn-whats {
+    animation: pulso 2.4s ease-in-out infinite;
+}
+
+@keyframes pulso {
+    0%, 100% { box-shadow: 0 4px 10px rgba(37, 162, 68, 0.4), 0 0 0 0 rgba(37, 162, 68, 0.45); }
+    50%      { box-shadow: 0 4px 10px rgba(37, 162, 68, 0.4), 0 0 0 10px rgba(37, 162, 68, 0); }
+}
+
+/* Zoom na imagem dos cards */
+.cards img,
+.card-natal img {
+    transition: transform 0.4s ease;
+}
+
+@media (hover: hover) {
+    .cards:hover img,
+    .card-natal:hover img {
+        transform: scale(1.05);
+    }
+}
+
+/* Card sobe ao tocar ou passar o mouse */
+.cards,
+.card-depoimento {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cards:active,
+.card-depoimento:active {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(90, 26, 51, 0.22);
+}
+
+@media (hover: hover) {
+    .cards:hover,
+    .card-depoimento:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 20px rgba(90, 26, 51, 0.22);
+    }
+}
+
+/* Aparecer ao rolar a página */
+.revelar {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.revelar.visivel {
+    opacity: 1;
+    transform: none;
+}
+
+/* Janela do cardápio abre com zoom suave */
+.visualizador[open] {
+    animation: abrir-janela 0.3s ease;
+}
+
+@keyframes abrir-janela {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* Logo gira de leve ao carregar */
+.logo {
+    animation: entrada-logo 0.8s ease;
+}
+
+@keyframes entrada-logo {
+    from { opacity: 0; transform: rotate(-20deg) scale(0.7); }
+    to   { opacity: 1; transform: none; }
+}
+
+/* Carrosséis: dica de deslizar + arrastar com o mouse */
+.area-cards,
+.cards-comentarios {
+    cursor: grab;
+    animation: balancar 1.4s ease 1.2s 2;
+}
+
+.area-cards.arrastando,
+.cards-comentarios.arrastando {
+    cursor: grabbing;
+    scroll-snap-type: none;   /* sem "puxar" o card enquanto arrasta */
+    user-select: none;
+}
+
+@keyframes balancar {
+    0%, 100% { transform: translateX(0); }
+    40%      { transform: translateX(-18px); }
+    70%      { transform: translateX(4px); }
+}
+
+.area-mais-vendidos,
+.area-depoimentos {
+    position: relative;
+}
+
+.area-mais-vendidos::after,
+.area-depoimentos::after {
+    content: "›";
+    position: absolute;
+    right: 2px;
+    top: 55%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--vinho);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--dourado);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(90, 26, 51, 0.25);
+    pointer-events: none;
+    animation: seta 1s ease-in-out infinite;
+    transition: opacity 0.3s;
+}
+
+@keyframes seta {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(5px); }
+}
+
+.area-mais-vendidos:has(.ja-deslizou)::after,
+.area-depoimentos:has(.ja-deslizou)::after {
+    opacity: 0;
+}
+
+/* Quem prefere menos movimento não vê nada disso */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .revelar {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 @media (max-width: 359px) {
     .conteudo-apresentacao {
         flex-direction: column;
